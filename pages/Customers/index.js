@@ -3,7 +3,7 @@ import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
 import { data } from '../../data/data.js';
 import { useUser } from '@auth0/nextjs-auth0/client.js';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0'
-const customers = () => {
+const Customers = () => {
   const {user}=useUser();
   return (
     <div className='bg-gray-100 min-h-screen'>
@@ -43,5 +43,5 @@ const customers = () => {
   );
 };
 
-export default customers;
+export default Customers;
 export const getServerSideProps=withPageAuthRequired();
