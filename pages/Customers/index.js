@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
 import { data } from '../../data/data.js';
-import { useUser } from '@auth0/nextjs-auth0/client.js';
+import { useUser } from '@auth0/nextjs-auth0/client';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 const Customers = () => {
   const {user}=useUser();
