@@ -1,7 +1,8 @@
 import React from 'react';
 import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
-import { data } from '../data/data.js';
+import { data } from '../../data/data.js';
 import { useUser } from '@auth0/nextjs-auth0/client.js';
+import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 const customers = () => {
   const {user}=useUser();
   return (
@@ -43,3 +44,4 @@ const customers = () => {
 };
 
 export default customers;
+export const getServerSideProps=withPageAuthRequired();
