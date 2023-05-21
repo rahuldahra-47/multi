@@ -13,6 +13,10 @@ import Faq from '@/components/Faq'
 export default function Home() {
   return (
     <>
+    <div className="main">
+        <div className="gradient" />
+      </div> 
+      <main className='app'>
       <Nav/>
     <section className='w-full flex-center flex-col md:mt-[120px] md:pt-10 md:mb-[100px] py-5'>
     <h1 className='head_text text-center'>
@@ -33,6 +37,7 @@ export default function Home() {
     <Faq/>
     <Contact />
     <Footer/>
+    </main>
   </>
   )
 }

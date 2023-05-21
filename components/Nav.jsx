@@ -5,12 +5,11 @@ import Image from "next/image";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-
-
+import { useUser } from "@auth0/nextjs-auth0/client";
 import { Disclosure } from "@headlessui/react";
 
 export default function Nav() {
-  
+const {user,error,isLoading}=useUser();
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
   }
@@ -107,19 +106,14 @@ export default function Nav() {
                           Contact Us
                         </Link>
                      
-                      {/* <Link
-                        href="#"
-                        className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
-                      >
-                        Sign In
-                      </Link> */}
-                         <Menu
+                        {user?
+                       ( <Menu
                         as="div"
                         className="relative inline-block text-left"
                       >
                         <div>
                           <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md  2 text-sm font-semibold  ring-1 ring-inset ring-gray-300  px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                            Sign In
+                          <Image src="/assets/profile.png" width={18} height={18} className=" my-1"></Image>{`${user.nickname}`}
                             <ChevronDownIcon
                               className="-mr-1 h-5 w-5 text-gray-400"
                               aria-hidden="true"
@@ -141,7 +135,7 @@ export default function Nav() {
                               <Menu.Item>
                                 {({ active }) => (
                                   <Link
-                                    href="/SignInAdmin"
+                                    href="/Dashboard"
                                     className={classNames(
                                       active
                                         ? "bg-gray-100 text-gray-900"
@@ -149,14 +143,14 @@ export default function Nav() {
                                       "block px-4 py-2 text-sm"
                                     )}
                                   >
-                                    Admin
+                                    Dashboard
                                   </Link>
                                 )}
                               </Menu.Item>
                               <Menu.Item>
                                 {({ active }) => (
                                   <Link
-                                    href="/SignInMember"
+                                    href="/api/auth/logout"
                                     className={classNames(
                                       active
                                         ? "bg-gray-100 text-gray-900"
@@ -164,14 +158,24 @@ export default function Nav() {
                                       "block px-4 py-2 text-sm"
                                     )}
                                   >
-                                    Member
+                                    SignOut
                                   </Link>
                                 )}
                               </Menu.Item>
                             </div>
                           </Menu.Items>
                         </Transition>
-                      </Menu>
+                      </Menu>): ( 
+                     
+                      <Link
+                        href="/api/auth/login"
+                        className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
+                      >
+                        SignIn
+                      </Link> 
+                           
+               
+             )}
                     </>
                   </Disclosure.Panel>
                 </div>
@@ -234,66 +238,80 @@ export default function Nav() {
        
             </ul>
           </div>
+          <div className="hidden mr-1 lg:flex nav__item">
+          
+           {user?
+                       ( <Menu
+                        as="div"
+                        className="relative inline-block text-left"
+                      >
+                        <div>
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md  2 text-sm font-semibold  ring-1 ring-inset ring-gray-300  px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                          <Image src="/assets/profile.png" width={18} height={18} className=" my-1 mr-1"></Image>{`${user.nickname}`}
+                            <ChevronDownIcon
+                              className="-mr-1 h-5 w-5 text-gray-400"
+                              aria-hidden="true"
+                            />
+                          </Menu.Button>
+                        </div>
 
-          <div className="hidden mr-3 space-x-3 lg:flex nav__item">
-           
-               <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="inline-flex  text-white bg-indigo-600  w-full justify-center gap-x-1.5 rounded-md  px-3 py-2 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-indigo-700 md:ml-5">
-                  Sign In
-                  <ChevronDownIcon
-                    className="-mr-1 h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                </Menu.Button>
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <Menu.Items className="absolute left-1 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div className="py-1">
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <Link
+                                    href="/Dashboard"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm"
+                                    )}
+                                  >
+                                    Dashboard
+                                  </Link>
+                                )}
+                              </Menu.Item>
+                              <Menu.Item>
+                                {({ active }) => (
+                                  <Link
+                                    href="/api/auth/logout"
+                                    className={classNames(
+                                      active
+                                        ? "bg-gray-100 text-gray-900"
+                                        : "text-gray-700",
+                                      "block px-4 py-2 text-sm"
+                                    )}
+                                  >
+                                    SignOut
+                                  </Link>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>): ( 
+                     
+                      <Link
+                        href="/api/auth/login"
+                        className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
+                      >
+                        SignIn
+                      </Link> 
+                           
+               
+             )}
               </div>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="py-1">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/SignInAdmin"
-                          className={classNames(
-                            active
-                              ? "bg-gray-100 text-gray-900"
-                              : "text-gray-700",
-                            "block px-4 py-2 text-sm font-inter"
-                          )}
-                        >
-                          Admin
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/SignInMember"
-                          className={classNames(
-                            active
-                              ? "bg-gray-100 text-gray-900"
-                              : "text-gray-700",
-                            "block px-4 py-2 text-sm font-inter"
-                          )}
-                        >
-                          Member
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu> 
-          </div>
+          
         </nav>
        
       </div>
