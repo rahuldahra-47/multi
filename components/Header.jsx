@@ -1,9 +1,9 @@
 import React from 'react'
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useUser } from '@auth0/nextjs-auth0/client';
 import {CgProfile} from 'react-icons/cg';
 const Header = () => {
   const {user,isLoading}=useUser();
-  if(isLoading) return <div>Loading....</div>
+  
   return (
     <div className='flex justify-between px-4 pt-4'>
         <h2 className='font-semibold'>Dashboard</h2>
