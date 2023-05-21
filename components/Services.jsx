@@ -1,13 +1,10 @@
 import Image from "next/image";
+
 export default function Services() {
     return (
       <>
      
-<div className="flex items-center">
-  <hr className="flex-grow border-t-2 border-gray-300"/>
-  <div className="px-3 text-gray-500">Your Text</div>
-  <hr className="flex-grow border-t-2 border-gray-300"/>
-</div>
+        <span className="flex items-center text-5xl font-semibold text-gray-800 md:mt-20" id="services">Services</span>
         <div className="container flex flex-wrap p-8 mx-auto xl:px-0 lg:gap-10 lg:flex-nowrap" >
           <div className="flex items-center justify-center w-full lg:w-1/2">
             <div>

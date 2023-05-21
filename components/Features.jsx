@@ -49,6 +49,7 @@ import {
   
     return (
       <>
+       <span className="flex items-center text-5xl font-semibold text-gray-800 md:mt-10" id="features">Features</span>
         <div className="py-5 ">
           <div
             className="container max-w-screen-xl px-4 mx-auto my-10"

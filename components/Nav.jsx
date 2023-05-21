@@ -7,6 +7,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { Disclosure } from "@headlessui/react";
+import { CgProfile } from "react-icons/cg";
 
 export default function Nav() {
 const {user,error,isLoading}=useUser();
@@ -113,7 +114,7 @@ const {user,error,isLoading}=useUser();
                       >
                         <div>
                           <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md  2 text-sm font-semibold  ring-1 ring-inset ring-gray-300  px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                          <Image src="/assets/profile.png" width={18} height={18} className=" my-1"></Image>{`${user.nickname}`}
+                          <CgProfile className="text-white mt-1 mr-1"/>{`${user.nickname}`}
                             <ChevronDownIcon
                               className="-mr-1 h-5 w-5 text-gray-400"
                               aria-hidden="true"
@@ -166,8 +167,7 @@ const {user,error,isLoading}=useUser();
                           </Menu.Items>
                         </Transition>
                       </Menu>): ( 
-                     
-                      <Link
+                        <Link
                         href="/api/auth/login"
                         className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
                       >
@@ -246,10 +246,10 @@ const {user,error,isLoading}=useUser();
                         className="relative inline-block text-left"
                       >
                         <div>
-                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md  2 text-sm font-semibold  ring-1 ring-inset ring-gray-300  px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                          <Image src="/assets/profile.png" width={18} height={18} className=" my-1 mr-1"></Image>{`${user.nickname}`}
+                          <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md  2 text-sm font-normal ring-1 ring-inset ring-gray-300  px-6 py-2  text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        <CgProfile className="text-white mt-1 mr-1"/>{`${user.nickname}`}
                             <ChevronDownIcon
-                              className="-mr-1 h-5 w-5 text-gray-400"
+                              className="-mr-1 h-6 w-5 text-gray-100"
                               aria-hidden="true"
                             />
                           </Menu.Button>
@@ -300,10 +300,10 @@ const {user,error,isLoading}=useUser();
                           </Menu.Items>
                         </Transition>
                       </Menu>): ( 
-                     
+
                       <Link
                         href="/api/auth/login"
-                        className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
+                        className="w-full px-6 py-2 text-center text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 rounded-md lg:ml-5"
                       >
                         SignIn
                       </Link> 
