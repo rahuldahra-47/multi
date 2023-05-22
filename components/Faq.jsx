@@ -4,8 +4,8 @@
 const Faq = () => {
   return (
     <div>     
-    <div className="max-w-screen-xl p-8 mx-auto">
-    <h2 className="mb-12 text-3xl font-semibold leading-9 text-gray-900 border-b-2 border-gray-100" id="faq">
+    <div className="max-w-screen-xl p-8 xs:mx-auto md:mx-10 ">
+    <h2 className="my-12 text-3xl font-semibold leading-9 text-gray-900 border-b-2 border-gray-100" id="faq">
       FAQs
     </h2>
     <ul className="flex flex-wrap items-start gap-8">

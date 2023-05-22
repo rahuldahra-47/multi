@@ -36,34 +36,34 @@ import {
       {
         title: "Cloud Powered",
         description:
-          "Crowdsource ramen crowdfunding backing. Business model canvas responsive web design non-disclosure.",
+          "Everything is uploaded on cloud and the data is stored at multiple places  in cloud.",
         icon: <CloudIcon className="w-6 h-6" />,
       },
       {
-        title: "GDPR Compliant",
+        title: "Secured",
         description:
-          "Virality influencer assets lean startup interaction design beta alpha seed round launch party.",
+          "Data is encrypted in the form of hash 64.We are concern for the privacy of our customers.",
         icon: <ShieldCheckIcon className="w-6 h-6" />,
       },
     ];
   
     return (
       <>
-       <span className="flex items-center text-5xl font-semibold text-gray-800 md:mt-10" id="features">Features</span>
+       <span className="flex items-center text-5xl font-semibold text-gray-800 md:mt-14" id="features">Features</span>
         <div className="py-5 ">
           <div
-            className="container max-w-screen-xl px-4 mx-auto my-10"
+            className="container max-w-screen-xl px-4 xs:mx-auto md:mx-14 "
             id="features">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {data.map((item, index) => (
                 <div className="my-5 grid__item lg:m-5" key={index}>
-                  <div className="flex items-center justify-center text-indigo-600 bg-indigo-100 rounded-full w-14 h-14 dark:bg-indigo-900 dark:text-indigo-300">
+                  <div className="flex items-center justify-center text-indigo-600 bg-indigo-100 rounded-full w-14 h-14  ">
                     {item.icon}
                   </div>
-                  <h3 className="pt-2 my-4 text-xl font-medium text-black dark:text-white text-opacity-90">
+                  <h3 className="pt-2 my-4 text-xl font-medium text-black text-opacity-90">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-400 text-opacity-70">
+                  <p className="text-lg text-gray-700  text-opacity-70">
                     {item.description}
                   </p>
                 </div>

@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Faq from '@/components/Faq'
-
+import Head from 'next/head'
 
 
 import Typewriter from 'typewriter-effect';
@@ -14,11 +14,15 @@ export default function Home() {
   return (
     <>
       <div className="main">
+        <Head>
+          <title>AIO - Management</title>
+          <link rel="icon" href="/assets/favicon.ico" />
+        </Head>
         <div className="gradient" />
       </div>
       <main className='app'>
         <Nav />
-        <section className='w-full flex-center flex-col h-[500px] py-5'>
+        <section className='w-full flex-center flex-col md:h-[500px] py-5'>
           <h1 className='head_text text-center'>
             Welcome to
             <br className='max-md:hidden' />

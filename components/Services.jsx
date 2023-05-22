@@ -4,7 +4,7 @@ export default function Services() {
     return (
       <>
      
-        <span className="flex items-center text-5xl font-semibold text-gray-800 md:mt-20" id="services">Services</span>
+        <span className="flex items-center text-5xl font-semibold text-gray-800 mt-10 md:mt-20" id="services">Services</span>
         <div className="container flex flex-wrap p-8 mx-auto xl:px-0 lg:gap-10 lg:flex-nowrap" >
           <div className="flex items-center justify-center w-full lg:w-1/2">
             <div>
@@ -20,10 +20,10 @@ export default function Services() {
           <div className="flex flex-wrap items-center w-full lg:w-1/2">
             <div>
               <div className="flex flex-col w-full mt-4">
-                <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+                <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl">
                 We Provide Three Management Systems
                 </h3>
-                <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+                <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
                   You can keep track of all records of attendace, books and stock inventory using our multiple management systems. Both member and admin are provided with different features.
                 </p>
               </div>
@@ -42,10 +42,10 @@ export default function Services() {
                       </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                    <h4 className="text-xl font-medium text-gray-800 ">
                     Library Management System
                     </h4>
-                    <p className="mt-1 text-gray-500 dark:text-gray-400">
+                    <p className="mt-1 text-gray-500 ">
                     Maintain Customer Book Records and balances on single
                       dashboard.
                     </p>
@@ -65,10 +65,10 @@ export default function Services() {
                       </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                    <h4 className="text-xl font-medium text-gray-800 ">
                     Attendance Management System
                     </h4>
-                    <p className="mt-1 text-gray-500 dark:text-gray-400">
+                    <p className="mt-1 text-gray-500 ">
                     Students can track their attendance through this system
                       and Teachers can maintain record of students attendance.
                     </p>
@@ -88,10 +88,10 @@ export default function Services() {
                       </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                    <h4 className="text-xl font-medium text-gray-800 ">
                     Inventory Management System
                     </h4>
-                    <p className="mt-1 text-gray-500 dark:text-gray-400">
+                    <p className="mt-1 text-gray-500 ">
                     An organization can maintain the record of the incoming &
                       outgoing stock.
                     </p>

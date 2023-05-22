@@ -25,8 +25,8 @@ const {user,error,isLoading}=useUser();
               <>
                 <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                   <Link
-                    href="#"
-                    className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-gray-100"
+                    href="/"
+                    className="flex items-center space-x-2 text-2xl font-medium text-indigo-600"
                   >
                     <Image
                       src="/assets/logo.png"
@@ -38,7 +38,7 @@ const {user,error,isLoading}=useUser();
 
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-gray-700 dark:focus:text-gray-300"
+                    className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none"
                   >
                     <svg
                       className="w-6 h-6 fill-current"
@@ -67,42 +67,42 @@ const {user,error,isLoading}=useUser();
                         <Link
                 
                           href="/"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           Home
                         </Link>
                         <Link
                 
                           href="#services"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           Services
                         </Link>
                         <Link
                 
                           href="#features"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           Features
                         </Link>
                         <Link
                 
                           href="#about"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           About Us
                         </Link>
                         <Link
                 
                           href="#faq"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           FAQ
                         </Link>
                         <Link
                 
                           href="#contact"
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-700 font-inter font-semibold"
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none  font-inter font-semibold"
                         >
                           Contact Us
                         </Link>
@@ -190,7 +190,7 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="/"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     Home
                   </Link>
@@ -198,7 +198,7 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="#services"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     Services
                   </Link>
@@ -206,7 +206,7 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="#features"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     Features
                   </Link>
@@ -214,7 +214,7 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="#about"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md = hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     About Us
                   </Link>
@@ -222,7 +222,7 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="#faq"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md  hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     FAQ
                   </Link>
@@ -230,7 +230,8 @@ const {user,error,isLoading}=useUser();
                 <li className="mr-3 nav__item">
                   <Link
                     href="#contact"
-                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
+                    className="inline-block px-4 py-2 text-md font-inter text-gray-800 no-underline rounded-md  
+                    hover:text-indigo-600 focus:text-indigo-600 focus:bg-indigo-100 focus:outline-none font-semibold"
                   >
                     Contact Us
                   </Link>
