@@ -3,6 +3,7 @@ import { FaShoppingBag } from 'react-icons/fa';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { data } from '../../data/data';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+import Sidebar from '@/components/Sidebar';
 const Orders = () => {
 
   return (
