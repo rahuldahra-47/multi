@@ -3,9 +3,11 @@ import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
 import { data } from '../../data/data.js';
 import { useUser } from '@auth0/nextjs-auth0/client';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+import Sidebar from '@/components/Sidebar.jsx';
 const Customers = () => {
   const {user}=useUser();
   return (
+    <Sidebar>
     <div className='bg-gray-100 min-h-screen'>
       <div className='flex justify-between p-4'>
         <h2 className="font-semibold">Books Summary</h2>
@@ -40,6 +42,7 @@ const Customers = () => {
         </div>
       </div>
     </div>
+    </Sidebar>
   );
 };
 

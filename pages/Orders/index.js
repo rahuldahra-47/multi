@@ -6,6 +6,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 const Orders = () => {
 
   return (
+    <Sidebar>
     <div className='bg-gray-100 min-h-screen'>
       <div className='flex justify-between px-4 pt-4'>
         <h2 className="font-semibold">Books Issued</h2>
@@ -60,6 +61,7 @@ const Orders = () => {
         </div>
       </div>
     </div>
+    </Sidebar>
   );
 };
 
