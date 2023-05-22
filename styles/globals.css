@@ -45,6 +45,10 @@ html {
   filter: invert(1);
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .gradient {
   height: fit-content;
   z-index: 3;
